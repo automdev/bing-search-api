@@ -42,7 +42,7 @@ func main() {
 	_ = url.Values{}
 	_ = json.Valid
 	params := url.Values{}
-	params.Set("query", "YOUR_VALUE")
+	params.Set("query", "home")
 	target := "https://api.autom.dev/v1/bing/search"
 	if len(params) > 0 {
 		target += "?" + params.Encode()

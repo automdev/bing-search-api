@@ -4,7 +4,7 @@
 const headers = { "x-api-key": process.env.AUTOM_API_KEY, "Content-Type": "application/json" };
 
 const params = new URLSearchParams({
-  "query": "YOUR_VALUE",
+  "query": "home",
 });
 const response = await fetch(`https://api.autom.dev/v1/bing/search?${params}`, { headers });
 if (!response.ok) {

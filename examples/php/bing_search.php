@@ -27,7 +27,7 @@ function call(string $method, string $url, ?string $body = null): string
 }
 
 $query = http_build_query([
-    'query' => 'YOUR_VALUE'
+    'query' => 'home'
 ]);
 $response = call('GET', 'https://api.autom.dev/v1/bing/search' . ($query ? '?' . $query : ''));
 
