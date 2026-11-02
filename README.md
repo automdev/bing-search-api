@@ -95,12 +95,13 @@ type BingSearchApi = {
     link?: string;
     title?: string;
     domain?: string;
-    snippet?: unknown;
+    snippet?: string;
     position?: number;
   }[];
   search_parameters?: {
     q?: string;
     cc?: string;
+    mkt?: string;
     page?: number;
     engine?: string;
   };
@@ -132,16 +133,17 @@ Example response from the API reference, abridged.
   },
   "organic_results": [
     {
-      "link": "https://home.google.com/intl/fr_fr/get-app/",
-      "title": "Téléchargez l'application Google Home",
-      "domain": "home.google.com",
-      "snippet": null,
-      "position": 2
+      "link": "https://openai.com/",
+      "title": "OpenAI",
+      "domain": "openai.com",
+      "snippet": "OpenAI is an AI research and deployment company.",
+      "position": 1
     }
   ],
   "search_parameters": {
-    "q": "home",
-    "cc": "en-US",
+    "q": "openai",
+    "cc": "us",
+    "mkt": "en-US",
     "page": 1,
     "engine": "bing"
   }
@@ -160,11 +162,12 @@ Example response from the API reference, abridged.
 | `organic_results[].link` | string |  |
 | `organic_results[].title` | string |  |
 | `organic_results[].domain` | string |  |
-| `organic_results[].snippet` | object |  |
+| `organic_results[].snippet` | string |  |
 | `organic_results[].position` | integer |  |
 | `search_parameters` | object |  |
 | `search_parameters.q` | string |  |
 | `search_parameters.cc` | string |  |
+| `search_parameters.mkt` | string |  |
 | `search_parameters.page` | integer |  |
 | `search_parameters.engine` | string |  |
 
